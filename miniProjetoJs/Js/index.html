@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Projeto Js</title>
+</head>
+
+<body>
+    <header>
+        <input type="text" id="busca" placeholder="Pesquisar por título">
+    </header>
+    <main>
+        
+        <section id="tarefas">
+            <h2>Tarefas <button onclick="abrirModal()">Nova tarefa</button></h2>
+            <!--<h6>Nenhuma tarefa registrada</h6>-->
+            <ul id="lista"></ul>
+        </section>
+
+        <section id="overlay" onclick="fecharModal()"></section>
+        <div id="criarTarefa" class="modal">
+            <form>
+                <h3>Criar tarefa <i class="fa-solid fa-xmark" onclick="fecharModal()"></i></h3>
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" required>
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" required></textarea>
+                <button type="submit">Criar</button>
+            </form>
+        </div>
+    
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
